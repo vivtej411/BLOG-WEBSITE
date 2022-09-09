@@ -28,6 +28,8 @@ app.use(express.static("public"));
 
 let posts=[];
 
+app.get('/favicon.ico', (req, res) => res.status(204));
+
 app.get("/",function(req,res){
   res.render("home",{
     homecontent:homeStartingContent,
